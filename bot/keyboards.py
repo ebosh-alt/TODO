@@ -60,6 +60,8 @@ def create_reply_keyboard(name_buttons: list, one_time_keyboard: bool = False, r
 
 start_kb = create_keyboard({"Просмотреть задачи": "view_task",
                             "Создать задачу": "create_task"})
+
 confirm_title_kb = create_keyboard({"Изменить": "change_title"})
+
 confirm_description_kb = create_keyboard({"Подтвердить": "confirm_task",
                                           "Изменить": "change_description"})

@@ -27,6 +27,7 @@ async def view(message: CallbackQuery, from_delete: bool = None):
     buttons = {}
     for task in data:
         buttons.update({task.title: f"task_{task.id}"})
+    buttons.update({"Назад": "main_menu"})
     await bot.edit_message_text(chat_id=id,
                                 message_id=message.message.message_id,
                                 text=get_mes("view_task"),

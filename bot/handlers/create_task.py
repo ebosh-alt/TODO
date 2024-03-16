@@ -19,7 +19,8 @@ async def create_task(message: CallbackQuery, state: FSMContext):
         await state.clear()
     await bot.edit_message_text(chat_id=id,
                                 message_id=message.message.message_id,
-                                text="Введите заголовок")
+                                text="Введите заголовок",
+                                reply_markup=kb.create_keyboard("Назад": "main_menu"))
     await state.set_state(States.create_task)
     await state.update_data(message_id=message.message.message_id)
 
